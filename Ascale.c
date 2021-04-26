@@ -9,7 +9,7 @@ int main()
 {
 
 	const float A = 440.00;					// Frequency in Hz
-	const float semiton = 1.06;			// a semiton distance
+	const float semitone = 1.06;			// a semitone distance
 	int note;												// Musical notes of a scale
 
 	float frequency = A;
@@ -19,14 +19,14 @@ int main()
 	for (note=1;note<8;note++){
 		if (note == 3 | note == 7){
 			printf("%dª\t-\t%.2f\n", note, frequency);
-			frequency *= semiton;
+			frequency *= semitone;
 
 		}else {
 			printf("%dª\t-\t%.2f\n", note, frequency);
-			frequency *= semiton;
+			frequency *= semitone;
 			printf("%dªm\t-\t%.2f\n", note+1, frequency);
 		}
-		frequency *= semiton;
+		frequency *= semitone;
 			}
 
 	return 0;
