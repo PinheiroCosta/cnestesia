@@ -5,7 +5,7 @@ This is a music API to manipulate the sound frequency.
 
 ## Features
 - return musical pitch notation of a given frequency (Hz)
-- return the musical chromatic scale of a given frequency(Hz)
+- return the musical chromatic scale of a given frequency (Hz)
 - return the previous and next semitone of a given frequency (Hz)
 
 
