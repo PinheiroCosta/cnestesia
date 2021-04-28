@@ -47,24 +47,27 @@ int pitch(double frequency)
 int scaleOf(double frequency) 
 {
 
-	double semitone = pow(2, 0.083333);		// a semiton distance
-	int note;						// Musical notes of a scale
+	double semitone = pow(2, 0.083333);			// a semiton distance
+	int note;												// Musical notes of a scale
 
 
 	// print the music intervals and its frequency value
-	printf("Interval\tFrequency\n");
+	printf("Interval\tFrequency\tNote\n");
 	for (note=1;note<8;note++)
 	{
 		if (note == 3 | note == 7)
 		{
-			printf("%dª\t-\t%.2f\n", note, frequency);
+			printf("%dª\t-\t%.2f\t-\t", note, frequency);
+			pitch(frequency);
 			frequency *= semitone;
 
 		}else 
 		{
-			printf("%dª\t-\t%.2f\n", note, frequency);
+			printf("%dª\t-\t%.2f\t-\t", note, frequency);
+			pitch(frequency);
 			frequency *= semitone;
-			printf("%dªm\t-\t%.2f\n", note+1, frequency);
+			printf("%dªm\t-\t%.2f\t-\t", note+1, frequency);
+			pitch(frequency);
 		}
 		frequency *= semitone;
 	}
