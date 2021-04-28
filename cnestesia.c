@@ -6,15 +6,13 @@
 int main()
 {
 	double frequency;
-	printf("Type the frequency to find the notation: ");
+	printf("Type the frequency to find the scale of the musical notation: ");
 	scanf("%lf", &frequency);
+	printf("\n");
 
 	printf("Notation: ");
 	pitch(frequency);
-	printf("Next semitone: ");
-	pitch(nextSemitone(frequency));
-	printf("Previous semitone: ");
-	pitch(previousSemitone(frequency));
+	printf("\n");
 
 	scaleOf(frequency);
 	return 0;
