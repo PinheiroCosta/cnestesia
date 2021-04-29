@@ -1,7 +1,7 @@
 # cnestesia
 Lets C the sound
 
-This is a music API to manipulate the sound frequency.
+This is a music library to manipulate the sound frequency.
 
 ## Features
 - return musical pitch notation of a given frequency (Hz)
