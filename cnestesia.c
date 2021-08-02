@@ -6,6 +6,7 @@
 int main()
 {
 	double frequency;
+
 	printf("Type the frequency to find the scale of the musical notation: ");
 	scanf("%lf", &frequency);
 	printf("\n");
@@ -16,5 +17,5 @@ int main()
 
 	scaleOf(frequency);
 	return 0;
-}
+}	// --------------------------- End of main() ---------------------------
 
