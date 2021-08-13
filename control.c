@@ -5,7 +5,7 @@
 const double TUNE = 440;
 
 
-//----------------- List of functions -------------------
+//----------------- Functions list -------------------
 
 int pitch(double frequency);
 int scaleOf(double frequency);
@@ -18,20 +18,20 @@ double previousSemitone(double frequency);
 
 
 double getSemitone(double frequency, int grade)
-// return desired semitone of a frequency in Hz
+// return the semitone of the input frequency(Hz)
 {
 		double semitone = frequency * pow(2, (double) grade/12);
 		return semitone;
 }		// ------------- End of getSemitone() --------------------
 
 double semitoneInterval()
-// return one semitone interval of a given frequency
+// return one semitone interval of a given frequency(Hz)
 {
 		return pow(2, 0.083333);
 }		// -------- End of semitoneInterval() ----------
 
 double nextSemitone(double frequency)
-// return the next semitone of a frequency in Hz
+// return the next semitone of a frequency(Hz)
 {
 		/*	A4  = 440Hz; A5  = 880Hz
 			A#4 = A4 * 2^(1/12)
@@ -43,13 +43,13 @@ double nextSemitone(double frequency)
 }		// -------------- End of nextSemitone() -----------------
 
 double previousSemitone(double frequency)
-// return the previous semiton of a frequency in Hz
+// return the previous semiton of a frequency(Hz)
 {
 		return frequency / semitoneInterval();
 }		// ------------- End of previousSemitone() --------------
 
 int pitch(double frequency)
-// prints the musical notation of a frequency in Hz
+// prints the musical notation of a frequency(Hz)
 {
 		double C0 = TUNE * pow(2, -4.75);
 		char* name[12] = {
@@ -68,7 +68,7 @@ int pitch(double frequency)
 }		// ------------------ End of pitch() --------------------
 
 int scaleOf(double frequency) 
-// Print a music scale of a input frequency
+// Prints a music scale of a given frequency(Hz)
 {
 		int note;		// Musical notes of a scale
 		char* grade[12] = {
@@ -77,7 +77,7 @@ int scaleOf(double frequency)
 			"5ª+", "6ª", "7ªm", "7ª"
 		};
 
-		// print the music intervals and its frequency value
+		// print the music notation intervals their frequency values
 		printf("Interval\tFrequency\tNote\n");
 		for (note=0;note<12;note++)
 		{
